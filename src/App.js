@@ -10,6 +10,7 @@ const App = () =>{
   const [monsters, setMonsters] = useState([]);
 
   useEffect (() => {
+    console.log("effect on");
     fetch('https://jsonplaceholder.typicode.com/users')
     .then(response => response.json())
     .then((users) => setMonsters(users));
